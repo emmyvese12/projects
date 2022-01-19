@@ -1,3 +1,7 @@
+"""
+Emmy Veselinov
+Project: Calculator
+"""
 import random
 
 def add(number1, number2):
