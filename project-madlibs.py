@@ -1,6 +1,6 @@
 """
 Emmy Veselinov
-Project 1: Mad Libs
+Project: Mad Libs Generator
 """
 import random
 
@@ -20,7 +20,7 @@ PLACES = ['library', 'cafeteria', 'movie theater', 'auditorium', 'classroom', 't
 ADJECTIVES = ['small', 'large', 'freezing' 'quiet', 'noisy', 'abandoned', 'haunted', 'crowded', 'hot', 'clean', 'dirty', 'creepy', 'magical']
 FEELINGS = ['sad', 'scared', 'worried', 'happy', 'excited', 'terrified', 'bored', 'obnoxious', 'impatient', 'sleepy', 'angry']
 
-# Generate a random word in a list so it can be used when replacing each parts of speech
+# Generate a random word in a list so it can be used when replacing each part of speech
 def random_word(alist):
     random_index = random.randrange(len(alist)) # Chooses a random index within a list
     random_choice = alist[random_index] 
@@ -55,12 +55,12 @@ def replace_partsofspeech(sentence):
         elif word == "<FEELING>":
             new_sentence = result + random_word(FEELINGS)
         elif word == "<FEELING>.":
-            new_sentence = result + random_word(FEELINGS) + "." # Add a period
+            new_sentence = result + random_word(FEELINGS) + "." 
         else:
             new_sentence = result + word
     return new_sentence
     
-    
+
 def tests():
     # Orignial sentences
     print("The original Mad libs template: ")
