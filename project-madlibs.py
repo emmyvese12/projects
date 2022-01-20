@@ -20,10 +20,9 @@ PLACES = ['library', 'cafeteria', 'movie theater', 'auditorium', 'classroom', 't
 ADJECTIVES = ['small', 'large', 'freezing' 'quiet', 'noisy', 'abandoned', 'haunted', 'crowded', 'hot', 'clean', 'dirty', 'creepy', 'magical']
 FEELINGS = ['sad', 'scared', 'worried', 'happy', 'excited', 'terrified', 'bored', 'obnoxious', 'impatient', 'sleepy', 'angry']
 
-# Generate a random word in a list so it can be used when replacing each part of speech
+# Generate a random word
 def random_word(alist):
-    random_index = random.randrange(len(alist)) # Chooses a random index within a list
-    random_choice = alist[random_index] 
+    random_choice = random.choice(alist)
     return random_choice
     
 # Replace each parts of speech in the story
@@ -63,12 +62,14 @@ def replace_partsofspeech(sentence):
 
 def tests():
     # Orignial sentences
-    print("The original Mad libs template: ")
+    print("Original Mad libs template: ")
+    print("---------------------------------------------------------")
     print(story1)
     print(story2)
     print() #blank line to keep it organized
     # Mad lib outputs
-    print("The Mad libs output: ")
+    print("Mad libs output: ")
+    print("---------------------------------------------------------")
     print(replace_partsofspeech(story1))
     print(replace_partsofspeech(story2))
 
